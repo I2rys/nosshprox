@@ -20,8 +20,8 @@ setInterval(async function(){
             ips,
             async(ip, index, max)=>{
                 if(blockedIPs.indexOf(ip) === -1){
-                    var response = await request(`http://167.172.85.80/api/check/proxy?ip=${ip}`)
-                    response = JSON.parse(response.body)
+                    var response = await request(`https://l3p-tick.vercel.app/api/ip/info?ip=${ip}`)
+                    response = JSON.parse(response.body).data
         
                     if(response.proxy){
                         console.log(`Proxy detected: ${ip}`)
