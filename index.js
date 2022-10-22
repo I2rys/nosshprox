@@ -20,7 +20,7 @@ setInterval(async function(){
             ips,
             async(ip, index, max)=>{
                 if(blockedIPs.indexOf(ip) === -1){
-                    var response = await request(`https://l3p-tick.vercel.app/api/ip/info?ip=${ip}`)
+                    var response = await request(`https://hnisa.vercel.app/api/ip/info?ip=${ip}`)
                     response = JSON.parse(response.body).data
         
                     if(response.proxy){
